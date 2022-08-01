@@ -68,7 +68,11 @@
   }
 
   /* Flex Items */
-  .flex-items {
+.flex-columns.flex-reverse .row {
+    flex-direction: row-reverse;
+}
+
+.flex-items {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,7 +81,7 @@
     justify-content: space-between;
   }
 
-  .flex-items > div {
+.flex-items > div {
     padding: 20px;
   }
 
