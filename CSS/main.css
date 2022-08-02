@@ -163,3 +163,31 @@ img {
     padding: 12px 0;
     margin-top: 20px;
 }
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 160px;
+}
+
+.footer a {
+    color: #F2FFF4;
+}
+
+.footer a:hover {
+    color: #24BF19;
+}
+
+.footer .social > * {
+    margin: 0 16px;
+}
+
+.footer p {
+    font-size: 16px;
+    font-weight: 100;
+    font-kerning: normal;
+}
