@@ -191,3 +191,20 @@ img {
     font-weight: 100;
     font-kerning: normal;
 }
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        /* display: flex; */
+        flex-direction: column;
+        height: 150px;
+        padding: 20px;
+    }
+
+    .navbar a {
+        padding: 10px 10px;
+        margin: 4px;
+    }
+
+}
