@@ -76,6 +76,11 @@ img {
     color: white;
 }
 
+.hero.blog {
+    background: url(../image_resources/home/blog-01.jpg) no-repeat center center/cover;
+    height: 50vh;
+}
+
 .hero .content {
     display: flex;
     flex-direction: column;
