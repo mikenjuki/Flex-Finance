@@ -50,6 +50,10 @@ img {
     padding: 0 30px;
 }
 
+.navbar.top {
+    background: transparent;
+}
+
 .navbar .logo {
     font-weight: 500;
 }
@@ -184,6 +188,34 @@ img {
 .callback-form .btn {
     padding: 12px 0;
     margin-top: 20px;
+}
+
+/* Post */
+.post {
+    padding: 50px 30px;
+}
+
+.post h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #85F78B;
+}
+
+.post .meta {
+    margin-bottom: 30px;
+}
+
+.post img {
+    width: 300px;
+    border-radius: 12px;
+    float: left;
+    margin-right: 24px;
+}
+
+.post p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Footer */

@@ -13,7 +13,7 @@
 
 <body>
     <header class="hero">
-        <div id="navbar" class="navbar">
+        <div id="navbar" class="navbar top">
             <h1 class="logo">
                 <span class="primary-text"><i class="fa-solid fa-book-open"></i>Flex</span> Finance
             </h1>
@@ -211,9 +211,21 @@
             <a href="http://"><i class="fa-brands fa-linkedin fa-2x"></i></a>
         </div>
 
-        <p>Copyright  &copy; 2020 - Flex Finance</p>
+        <p>Copyright  &copy; 2021 - Flex Finance</p>
 
     </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+
+        window.onscroll = function() {
+            if(window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+            } else {
+                navbar.classList.add('top');
+            }
+        }
+    </script>
 
 </body>
 
