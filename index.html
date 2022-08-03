@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/lightbox.min.css">
     <link rel="stylesheet" href="./CSS/utilities.css">
     <link rel="stylesheet" href="./CSS/main.css">
     <title>Welcome to Flex Finance</title>
@@ -104,7 +105,13 @@
 
             <div class="row">
                 <div class="column">
-                    <img src="./image_resources/cases/cases1.jpg" alt="">
+                    <a href="/image_resources/cases/cases1.jpg" data-lightbox="cases"
+                        data-title="We value input from our team">
+                        <img src="./image_resources/cases/cases1.jpg" alt="">
+                    </a>
+
+
+
                     <img src="./image_resources/cases/cases2.jpg" alt="">
                 </div>
                 <div class="column">
@@ -224,6 +231,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="./JS/lightbox.min.js"></script>
 
     <script src="shared.js"></script>
 
