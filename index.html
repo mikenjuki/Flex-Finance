@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./CSS/utilities.css">
     <link rel="stylesheet" href="./CSS/main.css">
     <title>Welcome to Flex Finance</title>
@@ -23,7 +25,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#cases">Cases</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -31,8 +33,9 @@
 
         <div class="content">
             <h1>We Are Flexible To Your Needs</h1>
-            <p>Access world class financial assistance 
-            <br>from the comfort of your home.</p>
+            <p>Access world class financial assistance
+                <br>from the comfort of your home.
+            </p>
 
             <a href="#about" class="btn"><i class="fa-solid fa-circle-chevron-right"></i> Read More</a>
         </div>
@@ -82,7 +85,9 @@
                     <div class="column-2 bg-primary">
                         <h4>Look No Further</h4>
                         <h2>We provide bespoke solutions</h2>
-                        <p>Our team is comprised of some of the leading minds in investment banking and wealth management, we pride ourselves in being able to harness the power of technology coupled with our great team to make sure your money is invested in high yield commodities.</p>
+                        <p>Our team is comprised of some of the leading minds in investment banking and wealth
+                            management, we pride ourselves in being able to harness the power of technology coupled with
+                            our great team to make sure your money is invested in high yield commodities.</p>
                         <a href="#" class="btn btn-outline"><i class="fa-solid fa-chevron-right"></i> Read More</a>
                     </div>
                 </div>
@@ -117,8 +122,8 @@
             </div>
         </section>
 
-         <!-- Solutions -->
-         <section class="solution flex-columns flex-reverse">
+        <!-- Solutions -->
+        <section class="solution flex-columns flex-reverse">
             <div class="row">
 
                 <div class="column">
@@ -132,15 +137,17 @@
                         <h4>November 20, 2021</h4>
                         <h2>Portfolio Management in the 21st Century</h2>
                         <h6>Latest Blog</h6>
-                        <p>Senior leaders of consumer goods corporations currently find themselves in a difficult situation. Wall Street continues to...</p>
-                        <a href="blog.html" class="btn btn-outline"><i class="fa-solid fa-chevron-right"></i> Continue Reading</a>
+                        <p>Senior leaders of consumer goods corporations currently find themselves in a difficult
+                            situation. Wall Street continues to...</p>
+                        <a href="blog.html" class="btn btn-outline"><i class="fa-solid fa-chevron-right"></i> Continue
+                            Reading</a>
                     </div>
                 </div>
             </div>
         </section>
 
-         <!-- Team -->
-         <section class="team section-padding" id="team">
+        <!-- Team -->
+        <section class="team section-padding" id="team">
             <header class="section-header">
                 <h4>Who we are</h4>
                 <h2>The Team</h2>
@@ -200,7 +207,7 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
 
     <footer class="footer bg-dark">
@@ -211,20 +218,50 @@
             <a href="http://"><i class="fa-brands fa-linkedin fa-2x"></i></a>
         </div>
 
-        <p>Copyright  &copy; 2021 - Flex Finance</p>
+        <p>Copyright &copy; 2021 - Flex Finance</p>
 
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script>
         const navbar = document.getElementById('navbar');
+        let scrolled = false;
 
-        window.onscroll = function() {
-            if(window.pageYOffset > 100) {
+        window.onscroll = function () {
+            if (window.pageYOffset > 100) {
                 navbar.classList.remove('top');
+                if (!scrolled) {
+                    navbar.style.transform = 'translateY(-70px)';
+                }
+                setTimeout(function () {
+                    navbar.style.transform = 'translateY(0)';
+                    scrolled = true;
+                }, 200);
+
             } else {
                 navbar.classList.add('top');
+                scrolled = false;
             }
         }
+
+        // Smooth Scrolling 
+        $('#navbar a, .btn').on('click', function (e) {
+            if (this.hash !== '') {
+                e.preventDefault();
+
+                const hash = this.hash;
+
+                $('html, body').animate(
+                    {
+                        scrollTop: $(hash).offset().top - 100,
+                    },
+                    800
+                );
+            }
+        });
+
     </script>
 
 </body>
